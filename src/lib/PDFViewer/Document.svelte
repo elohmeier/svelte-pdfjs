@@ -23,8 +23,8 @@ children Page components through the context API.
 		loaderror: CustomEvent<any>;
 	}
 
-	/** The URL of the file to load. */
-	export let file: string | URL | undefined = undefined;
+	/** The file to load. */
+	export let file: ArrayBuffer | undefined = undefined;
 	/**
 	 * Extra options provided to PDFJS.getDocument.
 	 * @see https://github.com/mozilla/pdf.js/blob/41dab8e7b6c1e2684d4afabb8f02e40a874d8e85/src/display/api.js#L126
@@ -51,7 +51,7 @@ children Page components through the context API.
 
 		current_doc.set(null);
 
-		loading_task = getDocument({ url: file, worker, ...loadOptions });
+		loading_task = getDocument({ data: file, worker, ...loadOptions });
 		loading_task.onProgress = onProgress!;
 		loading_task.promise
 			.then(
