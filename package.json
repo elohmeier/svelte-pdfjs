@@ -1,5 +1,5 @@
 {
-	"name": "svelte-pdfjs",
+	"name": "@nerdworks/svelte-pdfjs",
 	"version": "0.6.1",
 	"scripts": {
 		"dev": "vite dev",
