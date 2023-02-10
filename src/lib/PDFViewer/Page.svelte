@@ -88,4 +88,3 @@ Render a page from a PDF document. Must be a child of a `Document` component.
 	render_text_layer={renderTextLayer}
 	on:rendered={() => dispatch('rendered')}
 />
-/>
