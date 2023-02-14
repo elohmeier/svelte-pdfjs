@@ -19,7 +19,7 @@
 		/**
 		 * Dispatched when the page is rendered.
 		 */
-		rendered: void;
+		rendered: CustomEvent<PDFPageProxy>;
 	}
 
 	export async function render_page() {

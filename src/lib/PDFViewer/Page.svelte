@@ -9,7 +9,7 @@ Render a page from a PDF document. Must be a child of a `Document` component.
 	when their dependencies change.
  -->
 <script context="module" lang="ts">
-	import type { CalcViewport, MultipleOf90 } from '$lib/utils/target_dimension.js';
+	import type { CalcViewport, MultipleOf90 } from '../utils/target_dimension.js';
 	import type { PDFDocumentProxy, PDFPageProxy } from 'pdfjs-dist';
 	import type { PageViewport } from 'pdfjs-dist/types/src/display/display_utils.js';
 	import { getContext, onDestroy, createEventDispatcher } from 'svelte';
@@ -24,7 +24,7 @@ Render a page from a PDF document. Must be a child of a `Document` component.
 		/**
 		 * Dispatched when the page is rendered.
 		 */
-		rendered: void;
+		rendered: CustomEvent<PDFPageProxy>;
 	}
 
 	// #region props
