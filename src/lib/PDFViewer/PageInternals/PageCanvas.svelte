@@ -32,7 +32,7 @@
 
 		try {
 			await render_task.promise;
-			dispatch('rendered');
+			dispatch('rendered', page);
 		} catch (err) {
 			if (!(err instanceof RenderingCancelledException)) throw err;
 		}
